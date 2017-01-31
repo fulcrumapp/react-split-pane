@@ -16,6 +16,9 @@ class Resizer extends Component {
                 onMouseDown={(event) => {
                     this.props.onMouseDown(event);
                 }}
+                onDoubleClick={(event) => {
+                    this.props.onDoubleClick && this.props.onDoubleClick(event);
+                }}
                 onTouchStart={(event) => {
                     event.preventDefault();
                     this.props.onTouchStart(event);
@@ -33,6 +36,7 @@ Resizer.propTypes = {
     onMouseDown: PropTypes.func.isRequired,
     onTouchStart: PropTypes.func.isRequired,
     onTouchEnd: PropTypes.func.isRequired,
+    onDoubleClick: PropTypes.func,
     prefixer: PropTypes.instanceOf(Prefixer).isRequired,
     split: PropTypes.oneOf(['vertical', 'horizontal']),
     className: PropTypes.string.isRequired,
