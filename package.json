@@ -2,7 +2,7 @@
   "name": "react-split-pane",
   "description": "React split-pane component",
   "main": "index.js",
-  "version": "0.1.58",
+  "version": "0.1.59",
   "repository": {
     "type": "git",
     "url": "https://github.com/tomkp/react-split-pane"
@@ -63,11 +63,5 @@
     "demo:watch": "npm run compile:watch & watchify demo/Examples.js -d -t -o demo/bundle.js",
     "demo:publish": "npm run compile && browserify demo/Examples.js -d -t -o demo/bundle.js && surge demo react-split-pane.surge.sh",
     "release:patch": "npm test && npm run compile && npm version patch && git push && npm publish"
-  },
-  "browserify": {
-    "transform": [
-      [
-      ]
-    ]
   }
 }
